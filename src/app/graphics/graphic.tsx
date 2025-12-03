@@ -11,9 +11,7 @@ export function Graphic() {
 
   useEffect(() => {
     async function getData() {
-      const res = await fetch(baseURL('/api/get-data-from-db'), {
-        cache: 'force-cache'
-      });
+      const res = await fetch(baseURL('/api/get-data-from-db'));
       const { data } = (await res.json()) as { data: dataType[] };
       const newData = data.map(obj => ({
         date: obj.date,
