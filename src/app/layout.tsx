@@ -5,7 +5,7 @@ import { Background } from '@/components/Background';
 import { Navbar } from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Server Actions, Tables, Pagination, DB, etc.',
+  title: 'Server Actions, Tables, DB, etc.',
   description: 'Practice with NextJs',
   icons: {
     icon: '/assets/favicon.png'
