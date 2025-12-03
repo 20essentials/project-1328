@@ -1,0 +1,8 @@
+#bar-example-12 {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#bar-example-12 .bar {
+  --aspect-ratio: 4 / 3;
+}

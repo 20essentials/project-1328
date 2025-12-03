@@ -1,0 +1,253 @@
+:root {
+  --gradient: linear-gradient(to bottom, #00f, transparent);
+  --color-1: dodgerblue;
+  --color-2: #eee;
+}
+
+body {
+  --sb-track-color: #000;
+  --sb-thumb-color: var(--gradient);
+  --sb-size: 0.7vmax;
+  min-height: 100vh;
+  height: max-content;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+}
+
+.am-container {
+  position: absolute;
+  width: 60%;
+  min-height: 66vh;
+  background-color: #eee;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.am-container-home-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1vmax;
+  padding: 1vmax;
+  background-color: transparent;
+
+  * {
+    font-size: 1vmax;
+  }
+
+  .am-top {
+    display: flex;
+    width: 100%;
+    gap: 1vmax;
+
+    form {
+      width: 80%;
+      display: flex;
+
+      input {
+        width: 100%;
+        border: 0.1vmax solid var(--color-1);
+        font-size: 1vmax;
+        padding: 0.3vmax;
+      }
+    }
+
+    .am-create-invoice {
+      background-color: var(--color-1);
+      padding: 0.3vmax;
+      text-decoration: none;
+      flex-grow: 1;
+      text-align: center;
+      color: var(--color-2);
+      transition: opacity 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    background-color: #eee8;
+
+    thead {
+      background-color: rgb(205, 202, 202);
+    }
+
+    th {
+      user-select: none;
+    }
+
+    tbody {
+      tr td {
+        border-bottom: 0.1vmax solid #0005;
+      }
+    }
+
+    .am-delete-td {
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .am-button-status {
+      button.pending-td {
+        background-color: rgb(88, 84, 84);
+        color: var(--color-2);
+      }
+
+      button.paid-td {
+        background-color: rgb(90, 172, 8);
+        color: var(--color-2);
+      }
+
+      button {
+        cursor: pointer;
+        padding: 0.1vmax 0.3vmax;
+        border-radius: 0.3vmax;
+      }
+    }
+
+    th,
+    td {
+      padding: 0.3vmax 0.2vmax;
+    }
+
+    img {
+      width: 1.5vmax;
+      height: 1.5vmax;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 0.5vmax;
+      vertical-align: bottom;
+    }
+  }
+} 
+
+.am-container-invoice {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 32px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, sans-serif;
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    label {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    select,
+    input[type='number'] {
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #d1d1d1;
+      background: #fafafa;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.2s;
+
+      &:focus {
+        border-color: #7a5cff;
+        box-shadow: 0 0 0 3px rgba(122, 92, 255, 0.2);
+      }
+    }
+
+    input[type='submit'] {
+      margin-top: 10px;
+      padding: 14px;
+      background: #7a5cff;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.25s;
+
+      &:hover {
+        background: #684ae6;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+.am-container-graphic {
+  background-color: #fff2;
+  backdrop-filter: blur(2vmax);
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  place-content: center;
+
+  .am-th-year {
+    transform: translateX(-2vmax);
+    width: fit-content !important;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button,
+img {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/***************************SCROLL***************************/
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}

@@ -1,0 +1,35 @@
+.encrypted-neon-pattern {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #0d0d1a, #1a1a2f 50%, #2a1a4f);
+  filter: url(#neon-texture);
+  position: absolute;
+  z-index: -1;
+}
+
+.data-stream-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 30% 40%,
+      rgba(0, 240, 255, 0.2) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(100, 50, 255, 0.15) 0%,
+      transparent 15%
+    );
+  animation: pulse-stream 3s ease-in-out infinite;
+}
+
+@keyframes pulse-stream {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
