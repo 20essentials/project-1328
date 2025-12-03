@@ -1,4 +1,4 @@
-[![Foto Preview](preview/project-1328.avif)](https://project-1328.vercel.app/)
+[![Foto Preview](preview/project-1328.avif)](https://my-project-1328.vercel.app/)
 - Navbar Design Code Inspiration: https://uiverse.io/chase2k25/slimy-chipmunk-97
 
 <div align="center" style="display: flex; justify-content: center;">
