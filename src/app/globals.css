@@ -18,11 +18,14 @@ body {
 .am-container {
   position: absolute;
   width: 60%;
-  min-height: 66vh;
   background-color: #eee;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (width <= 1111px) and (orientation: portrait) {
+    width: 88%;
+  }
 }
 
 .am-container-home-table {
@@ -117,6 +120,10 @@ body {
     th,
     td {
       padding: 0.3vmax 0.2vmax;
+
+      @media (width <= 1111px) and (orientation: portrait) {
+        font-size: 0.7vmax !important;
+      }
     }
 
     img {
@@ -128,61 +135,62 @@ body {
       vertical-align: bottom;
     }
   }
-} 
+}
 
 .am-container-invoice {
-  max-width: 480px;
-  margin: 40px auto;
-  padding: 32px;
-  border-radius: 20px;
+  max-width: 31.25vmax;
+  height: auto;
+  margin: 2.6vmax auto;
+  padding: 2.08vmax;
+  box-shadow: 0 0.26vmax 1.95vmax rgba(0, 0, 0, 0.08);
+  border-radius: 1.3vmax;
   background: #fff;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
   font-family: system-ui, sans-serif;
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.04vmax;
+    margin-bottom: 1.56vmax;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 24px;
     color: #333;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.1vmax;
 
     label {
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 1.1vmax;
       color: #444;
     }
 
     select,
     input[type='number'] {
-      padding: 12px 14px;
-      border-radius: 10px;
-      border: 1px solid #d1d1d1;
+      padding: 0.78vmax 0.91vmax;
+      border-radius: 0.65vmax;
+      border: 0.07vmax solid #d1d1d1;
+      font-size: 1.04vmax;
       background: #fafafa;
-      font-size: 1rem;
       outline: none;
       transition: 0.2s;
 
       &:focus {
         border-color: #7a5cff;
-        box-shadow: 0 0 0 3px rgba(122, 92, 255, 0.2);
+        box-shadow: 0 0 0 0.2vmax rgba(122, 92, 255, 0.2);
       }
     }
 
     input[type='submit'] {
-      margin-top: 10px;
-      padding: 14px;
+      margin-top: 0.65vmax;
+      padding: 0.91vmax;
+      border-radius: 0.78vmax;
+      font-size: 1.04vmax;
       background: #7a5cff;
       color: #fff;
       border: none;
-      border-radius: 12px;
       font-weight: 600;
-      font-size: 1rem;
       cursor: pointer;
       transition: 0.25s;
 

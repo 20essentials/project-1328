@@ -1,5 +1,4 @@
 'use client';
-
 import '@/styles/Navbar.css';
 import { usePathname, useRouter } from 'next/navigation';
 import { useRef } from 'react';
