@@ -24,7 +24,8 @@ body {
   transform: translate(-50%, -50%);
 
   @media (width <= 1111px) and (orientation: portrait) {
-    width: 88%;
+    width: 100%;
+    transform: scale(0.87) translate(-50%, -50%);
   }
 }
 
